@@ -23,6 +23,7 @@ namespace DataViewGrid_Example {
         /// </summary>
         public DataGridViewForm() {
             InitializeComponent();
+            playerBindingSource.DataSource = players;
         }
 
         /// <summary>
