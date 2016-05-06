@@ -28,11 +28,10 @@
             this.showValuesButton = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.playerBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.playerTokenImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             this.nameDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gamePointsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.highestPointsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playerTokenColourDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.playerTokenImageDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.playerBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -64,51 +63,52 @@
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.playerTokenImageDataGridViewImageColumn,
             this.nameDataGridViewTextBoxColumn,
             this.gamePointsDataGridViewTextBoxColumn,
-            this.highestPointsDataGridViewTextBoxColumn,
-            this.playerTokenColourDataGridViewTextBoxColumn,
-            this.playerTokenImageDataGridViewImageColumn});
+            this.highestPointsDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.playerBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(23, 29);
+            this.dataGridView1.Location = new System.Drawing.Point(2, 1);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.Size = new System.Drawing.Size(282, 213);
             this.dataGridView1.TabIndex = 3;
             // 
             // playerBindingSource
             // 
             this.playerBindingSource.DataSource = typeof(DataViewGrid_Example.Player);
             // 
+            // playerTokenImageDataGridViewImageColumn
+            // 
+            this.playerTokenImageDataGridViewImageColumn.DataPropertyName = "PlayerTokenImage";
+            this.playerTokenImageDataGridViewImageColumn.HeaderText = "Colour";
+            this.playerTokenImageDataGridViewImageColumn.ImageLayout = System.Windows.Forms.DataGridViewImageCellLayout.Stretch;
+            this.playerTokenImageDataGridViewImageColumn.Name = "playerTokenImageDataGridViewImageColumn";
+            this.playerTokenImageDataGridViewImageColumn.ReadOnly = true;
+            this.playerTokenImageDataGridViewImageColumn.Width = 60;
+            // 
             // nameDataGridViewTextBoxColumn
             // 
             this.nameDataGridViewTextBoxColumn.DataPropertyName = "Name";
             this.nameDataGridViewTextBoxColumn.HeaderText = "Name";
             this.nameDataGridViewTextBoxColumn.Name = "nameDataGridViewTextBoxColumn";
+            this.nameDataGridViewTextBoxColumn.Width = 120;
             // 
             // gamePointsDataGridViewTextBoxColumn
             // 
             this.gamePointsDataGridViewTextBoxColumn.DataPropertyName = "GamePoints";
-            this.gamePointsDataGridViewTextBoxColumn.HeaderText = "GamePoints";
+            this.gamePointsDataGridViewTextBoxColumn.HeaderText = "Current Score";
             this.gamePointsDataGridViewTextBoxColumn.Name = "gamePointsDataGridViewTextBoxColumn";
+            this.gamePointsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.gamePointsDataGridViewTextBoxColumn.Width = 50;
             // 
             // highestPointsDataGridViewTextBoxColumn
             // 
             this.highestPointsDataGridViewTextBoxColumn.DataPropertyName = "HighestPoints";
-            this.highestPointsDataGridViewTextBoxColumn.HeaderText = "HighestPoints";
+            this.highestPointsDataGridViewTextBoxColumn.HeaderText = "Best Score";
             this.highestPointsDataGridViewTextBoxColumn.Name = "highestPointsDataGridViewTextBoxColumn";
-            // 
-            // playerTokenColourDataGridViewTextBoxColumn
-            // 
-            this.playerTokenColourDataGridViewTextBoxColumn.DataPropertyName = "PlayerTokenColour";
-            this.playerTokenColourDataGridViewTextBoxColumn.HeaderText = "PlayerTokenColour";
-            this.playerTokenColourDataGridViewTextBoxColumn.Name = "playerTokenColourDataGridViewTextBoxColumn";
-            // 
-            // playerTokenImageDataGridViewImageColumn
-            // 
-            this.playerTokenImageDataGridViewImageColumn.DataPropertyName = "PlayerTokenImage";
-            this.playerTokenImageDataGridViewImageColumn.HeaderText = "PlayerTokenImage";
-            this.playerTokenImageDataGridViewImageColumn.Name = "playerTokenImageDataGridViewImageColumn";
-            this.playerTokenImageDataGridViewImageColumn.ReadOnly = true;
+            this.highestPointsDataGridViewTextBoxColumn.ReadOnly = true;
+            this.highestPointsDataGridViewTextBoxColumn.Width = 50;
             // 
             // DataGridViewForm
             // 
@@ -131,12 +131,11 @@
         private System.Windows.Forms.Button addPlayerButton;
         private System.Windows.Forms.Button showValuesButton;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.BindingSource playerBindingSource;
+        private System.Windows.Forms.DataGridViewImageColumn playerTokenImageDataGridViewImageColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn nameDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gamePointsDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn highestPointsDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn playerTokenColourDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn playerTokenImageDataGridViewImageColumn;
-        private System.Windows.Forms.BindingSource playerBindingSource;
     }
 }
 
